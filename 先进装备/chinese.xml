@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Simplified Chinese" nowhitespace="true" translatedname="中文(简体)">
+  <entityname.nanomechanicaltank>纳米机械罐</entityname.nanomechanicaltank>
+  <entitydescription.nanomechanicaltank>一个散发着某种龙舌兰酒气味的罐子，它好像在动</entitydescription.nanomechanicaltank>
+  <entityname.advancednanoarmor>先进护甲</entityname.advancednanoarmor>
+  <entitydescription.advancednanoarmor>欢迎使用先进护甲MKⅡ</entitydescription.advancednanoarmor>
+  <entityname.integratedfacearmour>集成式面甲</entityname.integratedfacearmour>
+  <entitydescription.integratedfacearmour>它会帮你找到最优解</entitydescription.integratedfacearmour>
+  <entityname.improveadvancedgenesplicer>改进型基因拼接器</entityname.improveadvancedgenesplicer>
+  <entitydescription.improveadvancedgenesplicer>不仅可以给你更多，还可以保护你的肉体</entitydescription.improveadvancedgenesplicer>
+  <entityname.WirelessHealingHeadset>无线治疗耳机</entityname.WirelessHealingHeadset>
+  <entitydescription.WirelessHealingHeadset>也许能救你一命</entitydescription.WirelessHealingHeadset>
+  <entityname.thedimensionaltoolbelt>次元工具箱</entityname.thedimensionaltoolbelt>
+  <entitydescription.thedimensionaltoolbelt>一个带有神奇功能的小箱子，你可以把它挂在腰间</entitydescription.thedimensionaltoolbelt>
+  <entityname.multipurposetoolknife>"物理学"</entityname.multipurposetoolknife>
+  <entitydescription.multipurposetoolknife>热爱生命</entitydescription.multipurposetoolknife>
+  <entityname.improvedplasmacutter>改进型等离子切割机</entityname.improvedplasmacutter>
+  <entitydescription.improvedplasmacutter>更快更强更持久，嗯~没问题</entitydescription.improvedplasmacutter>
+  <entityname.improvedweldingtool>改进型焊接工具</entityname.improvedweldingtool>
+  <entitydescription.improvedweldingtool>更快更强更持久，嗯~没问题</entitydescription.improvedweldingtool>
+  <entityname.shapedchargecell>聚能电池</entityname.shapedchargecell>
+  <entitydescription.shapedchargecell>小小的一个蕴含着毁灭周围一切的能量</entitydescription.shapedchargecell>
+  <entityname.advancedpolymergun>聚能手炮</entityname.advancedpolymergun>
+  <entitydescription.advancedpolymergun>"晚 安"</entitydescription.advancedpolymergun>
+  <entityname.improvedancientweapon>远古兵器.改</entityname.improvedancientweapon>
+  <entitydescription.improvedancientweapon>它现在更有用了</entitydescription.improvedancientweapon>
+  <entityname.husksymbiosisextract>画皮共生体萃取物</entityname.husksymbiosisextract>
+  <entitydescription.husksymbiosisextract>可以帮你解决一个小麻烦</entitydescription.husksymbiosisextract>
+  <entityname.nanomechanicaltransplanter>纳米生化移植器</entityname.nanomechanicaltransplanter>
+  <entitydescription.nanomechanicaltransplanter>先知赐福</entitydescription.nanomechanicaltransplanter>
+  <entityname.environmentalscanner>环境扫描仪</entityname.environmentalscanner>
+  <entitydescription.environmentalscanner>无论手持还是腰挂，它都能把信息投影到你眼前</entitydescription.environmentalscanner>
+  <Afflictionname.thepowerofnano>纳米之力</Afflictionname.thepowerofnano>
+  <Afflictiondescription.thepowerofnano>纳米机械，小子</Afflictiondescription.thepowerofnano>
+  <Afflictionname.technicalcare>科技加护</Afflictionname.technicalcare>
+  <Afflictiondescription.technicalcare>祝您度过安全的一天</Afflictiondescription.technicalcare>
+  <Visualaid>视觉辅助</Visualaid>
+</infotexts>
