@@ -80,7 +80,7 @@
       <sprite name="Suit Vest Wearable" texture="%ModDir%/00000.png" limb="Torso" hidelimb="false" inherittexturescale="true" hideotherwearables="false" inheritorigin="true" inheritsourcerect="true" />
     </Wearable>
     <AiTarget soundrange="50000" sonarlabel="entityname.advancednanoarmor" sight="1000" staticsight="true" />
-    <LightComponent LightColor="0,0,0,0" range="50" castshadows="false" IsOn="false" canbeselected="false">
+    <LightComponent LightColor="0,0,0,0" range="50" castshadows="false" IsOn="false" canbeselected="false" vulnerabletoEMP="false" >
       <StatusEffect type="OnWearing" targettype="This" SoundRange="50000" setvalue="true" />
     </LightComponent>
   </Item>
@@ -113,7 +113,7 @@
     <Body width="40" height="35" density="15" />
     <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
       <sprite name="Mask Wearable" texture="%ModDir%/00000.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" hidelimb="false" hideotherwearables="false">
-        <LightComponent range="1000.0" lightcolor="250,250,250,250" IsOn="false" allowingameediting="false">
+        <LightComponent range="1000.0" lightcolor="250,250,250,250" IsOn="false" allowingameediting="false" vulnerabletoEMP="false" >
           <StatusEffect type="OnWearing" target="This" setvalue="true">
             <Conditional IsDead="false" />
           </StatusEffect>
@@ -393,7 +393,7 @@
       <ParticleEmitterHitCharacter particle="fleshsmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100" />
       <sound file="Content/Items/Tools/PlasmaCutterLoop.ogg" type="OnUse" range="500.0" loop="true" />
       <Fixable identifier="structure" />
-      <LightComponent LightColor="0.8,0.7,1.0,1.0" Flicker="0.5">
+      <LightComponent LightColor="200,175,255,255" Flicker="0.5" vulnerabletoEMP="false" >
         <sprite texture="Content/Items/Electricity/lightsprite.png" origin="0.5,0.5" />
       </LightComponent>
     </RepairTool>
@@ -480,7 +480,7 @@
       </StatusEffect>
       <Fixable identifier="structure" />
       <NonFixable identifier="thalamus,ice" />
-      <LightComponent LightColor="1.0,0.9,0.7,1.0" Flicker="0.5">
+      <LightComponent LightColor="255,225,175,255" Flicker="0.5" vulnerabletoEMP="false" >
         <sprite texture="Content/Items/Electricity/lightsprite.png" origin="0.5,0.5" />
       </LightComponent>
     </RepairTool>
@@ -562,7 +562,7 @@
       <Item identifier="scrap" amount="4" />
     </Deconstruct>
     <Sprite texture="Content/Items/Alien/AlienRuins_Items.png" sourcerect="0,1952,34,77" depth="0.7" origin="0.5,0.5" />
-    <LightComponent AllowInGameEditing="false" lightcolor="150,150,175,25" canbeselected="false" range="100.0" IsOn="true" castshadows="false" />
+    <LightComponent AllowInGameEditing="false" lightcolor="150,150,175,25" canbeselected="false" range="100.0" IsOn="true" castshadows="false" vulnerabletoEMP="false" />
     <Body radius="15" height="40" density="20" />
     <ItemContainer hideitems="true" capacity="1" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true" SpawnWithId="shapedchargeammunition" removecontaineditemsondeconstruct="true" containedstateindicatorstyle="battery">
       <Containable items="shapedchargeammunition" />
@@ -598,7 +598,7 @@
     <Sprite texture="Content/Items/Jobgear/TalentGear.png" sourcerect="0,256,111,56" depth="0.55" origin="0.5,0.5" />
     <Body width="106" height="49" density="70" />
     <Holdable slots="Any,RightHand+LeftHand" controlpose="true" aimpos="90,10" handle1="-40,-10" handle2="-40,-15" msg="ItemMsgPickUpSelect" />
-    <RangedWeapon reload="1" launchimpulse="1000" holdtrigger="true" barrelpos="50,15" spread="0" unskilledspread="10" combatPriority="90" drawhudwhenequipped="true" crosshairscale="0.5" maxchargetime="1">
+    <RangedWeapon reload="1" launchimpulse="1000" holdtrigger="true" barrelpos="50,15" spread="0" unskilledspread="10" combatPriority="90" drawhudwhenequipped="true" crosshairscale="0.5" penetration="10" maxchargetime="1">
       <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
       <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
       <ParticleEmitter particle="FlareBubbles" scalemin="1.5" scalemax="2.0" particleamount="15" anglemin="0" anglemax="360" velocitymin="0" velocitymax="50" />
@@ -672,7 +672,7 @@
       </StatusEffect>
       <Fixable identifier="structure" />
       <sound file="Content/Items/Alien/alienweapon.ogg" type="OnUse" range="1000.0" loop="true" />
-      <LightComponent LightColor="0.5,0.5,1.0,1.0" Flicker="0.5" range="500">
+      <LightComponent LightColor="100,150,200,255" Flicker="0.5" range="500" vulnerabletoEMP="false" >
         <sprite texture="Content/Items/Electricity/lightsprite.png" origin="0,0.5" />
       </LightComponent>
     </RepairTool>
@@ -680,7 +680,7 @@
       <Containable items="shapedchargecell" />
     </ItemContainer>
   </Item>
-  <Item name="" identifier="husksymbiosisextract" category="Material" maxstacksize="8" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.5" RequireAimToUse="True" HitOnlyCharacters="true">
+  <Item name="" identifier="husksymbiosisextract" category="Medical" maxstacksize="8" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.5" RequireAimToUse="True" HitOnlyCharacters="true">
     <PreferredContainer primary="medcab" />
     <Price baseprice="50000">
       <Price storeidentifier="merchantoutpost" sold="false" />
@@ -747,7 +747,7 @@
     <Wearable limbtype="Head" slots="Any,HealthInterface" msg="ItemMsgPickUpSelect">
       <WifiComponent range="2000000000" LinkToChat="true" allowcrossteamcommunication="true" />
       <sprite name="Gene Splicer Wearable" texture="%ModDir%/00000.png" limb="Head" hidelimb="false" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" hideotherwearables="false">
-        <LightComponent LightColor="125,175,255,255" range="2500" castshadows="false" IsOn="true" />
+        <LightComponent LightColor="125,175,255,125" range="2500" castshadows="false" powerconsumption="1000000000" IsOn="true" vulnerabletoEMP="false" />
       </sprite>
       <StatusEffect type="OnWearing" target="Character" disabledeltatime="true">
         <Affliction identifier="nano.nightvision" amount="50" />
@@ -768,7 +768,7 @@
       </CustomInterface>
     </Wearable>
     <AiTarget soundrange="10000" sonarlabel=" " sight="500" staticsight="true" />
-    <LightComponent LightColor="0,0,0,0" range="50" castshadows="false" IsOn="false" canbeselected="false">
+    <LightComponent LightColor="0,0,0,0" range="50" castshadows="false" IsOn="false" canbeselected="false" vulnerabletoEMP="false" >
       <StatusEffect type="OnWearing" targettype="This" SoundRange="50000" setvalue="true" />
     </LightComponent>
     <StatusHUD drawhudwhenequipped="true" />
@@ -806,7 +806,7 @@
       <sprite name="Belt" texture="%ModDir%/00000.png" sourcerect="256,102,112,54" limb="Torso" hidelimb="false" inherittexturescale="true" hideotherwearables="false" inheritorigin="true" inheritsourcerect="true" />
     </Wearable>
     <AiTarget sight="250" staticsight="true" />
-    <Sonar range="50000.0" drawhudwhenequipped="true" hasmineralscanner="true" allowuioverlap="true">
+    <Sonar range="50000.0" drawhudwhenequipped="true" hasmineralscanner="true" allowuioverlap="true" vulnerabletoEMP="false" >
       <GuiFrame relativesize="0.275,0.5" anchor="BottomCenter" absoluteoffset="-250,100" />
       <PingCircle texture="Content/Items/Command/pingCircle.png" origin="0.5,0.5" />
       <DirectionalPingCircle texture="Content/Items/Command/directionalPingCircle.png" origin="0.0,0.5" />
@@ -826,7 +826,7 @@
       <icon identifier="mineral" texture="Content/UI/MainIconsAtlas.png" sourcerect="336,434,7,12" origin="0.5,0.5" />
       <icon identifier="" texture="Content/UI/MainIconsAtlas.png" sourcerect="346,416,4,4" origin="0.5,0.5" />
     </Sonar>
-    <MiniMap drawhudwhenequipped="true" requirewaterdetectors="false" requireoxygendetectors="false">
+    <MiniMap drawhudwhenequipped="true" requirewaterdetectors="false" requireoxygendetectors="false" vulnerabletoEMP="false" >
       <GuiFrame relativesize="0.25,0.275" anchor="TopLeft" style="ItemUI" />
     </MiniMap>
   </Item>
