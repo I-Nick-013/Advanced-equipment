@@ -28,7 +28,29 @@
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
       </StatusEffect>
       <StatusEffect tags="medical" type="OnUse" target="This, Limb" duration="60">
-        <Affliction identifier="thepowerofnano" strength="500" />
+        <ReduceAffliction identifier="damage" amount="25" />
+        <ReduceAffliction identifier="burn" amount="10" />
+        <ReduceAffliction identifier="bleeding" amount="5" />
+        <ReduceAffliction identifier="bloodloss" amount="1" />
+        <ReduceAffliction identifier="stun" amount="10" />
+        <ReduceAffliction identifier="emp" amount="1" />
+        <ReduceAffliction identifier="pressure" amount="1" />
+        <ReduceAffliction identifier="gaze" amount="1" />
+        <ReduceAffliction identifier="hallucinating" amount="1" />
+        <ReduceAffliction identifier="hallucinatingshortduration" amount="1" />
+        <ReduceAffliction identifier="oxygenlow" amount="1" />
+        <ReduceAffliction identifier="alieninfection" amount="5" />
+        <ReduceAffliction identifier="paralysis" amount="5" />
+        <ReduceAffliction identifier="poison" amount="10" />
+        <ReduceAffliction identifier="debuff" amount="25" />
+        <ReduceAffliction identifier="psychosis" amount="1" />
+        <ReduceAffliction identifier="nausea" amount="1" />
+        <ReduceAffliction identifier="slow" amount="1" />
+        <ReduceAffliction identifier="spaceherpes" amount="1" />
+        <ReduceAffliction identifier="respawnpenalty" amount="1" />
+        <ReduceAffliction identifier="invertcontrols" amount="1" />
+        <ReduceAffliction identifier="infection" amount="1" />
+        <ReduceAffliction identifier="none" amount="1" />
       </StatusEffect>
       <StatusEffect type="OnUse" target="UseTarget" disabledeltatime="true">
         <GiveSkill skillidentifier="electrical" amount="1" />
@@ -72,15 +94,15 @@
     <Body radius="45" height="35" density="30" />
     <Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
       <StatusEffect type="OnWearing" target="Character" disabledeltatime="true">
-        <Affliction identifier="technicalcare" strength="1000" />
-        <Affliction identifier="combatstimulant" strength="1000" />
+        <Affliction identifier="Muscleenhancer" strength="500" />
+        <Affliction identifier="combatstimulant" strength="500" />
         <Sound file="Content/Items/Diving/DivingSuitLoop1.ogg" range="500" />
         <Sound file="Content/Items/Diving/DivingSuitLoop2.ogg" range="500" />
       </StatusEffect>
       <sprite name="Suit Vest Wearable" texture="%ModDir%/00000.png" limb="Torso" hidelimb="false" inherittexturescale="true" hideotherwearables="false" inheritorigin="true" inheritsourcerect="true" />
     </Wearable>
     <AiTarget soundrange="50000" sonarlabel="entityname.advancednanoarmor" sight="1000" staticsight="true" />
-    <LightComponent LightColor="0,0,0,0" range="50" castshadows="false" IsOn="false" canbeselected="false" vulnerabletoEMP="false" >
+    <LightComponent LightColor="0,0,0,0" range="50" castshadows="false" IsOn="false" canbeselected="false" vulnerabletoEMP="false">
       <StatusEffect type="OnWearing" targettype="This" SoundRange="50000" setvalue="true" />
     </LightComponent>
   </Item>
@@ -113,32 +135,17 @@
     <Body width="40" height="35" density="15" />
     <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
       <sprite name="Mask Wearable" texture="%ModDir%/00000.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" hidelimb="false" hideotherwearables="false">
-        <LightComponent range="1000.0" lightcolor="250,250,250,250" IsOn="false" allowingameediting="false" vulnerabletoEMP="false" >
+        <LightComponent range="1000" lightcolor="250,250,250,250" IsOn="false" allowingameediting="false" vulnerabletoEMP="false">
           <StatusEffect type="OnWearing" target="This" setvalue="true">
             <Conditional IsDead="false" />
           </StatusEffect>
           <LightTexture texture="Content/Lights/divinghelmetlight.png" origin="0.05, 0.5" size="10,10" />
         </LightComponent>
       </sprite>
-      <StatusEffect type="OnWearing" target="Character" OxygenAvailable="1000.0" UseHullOxygen="true">
-        <Affliction identifier="durationincrease" amount="1000" />
-        <Affliction identifier="husktransformimmunitytemporary" amount="1000" />
+      <StatusEffect type="OnWearing" target="Character" OxygenAvailable="10000" UseHullOxygen="true">
+        <Affliction identifier="neuroenhancer" amount="500" />
+        <Affliction identifier="adrenalinerush" amount="500" />        
       </StatusEffect>
-      <StatValue stattype="MaxRepairConditionMultiplierMechanical" value="0.5" />
-      <StatValue stattype="MaxRepairConditionMultiplierElectrical" value="0.5" />
-      <StatValue stattype="CPRBoost" value="1" />
-      <StatValue stattype="PoisonMultiplier" value="1" />
-      <StatValue stattype="ReputationGainMultiplier" value="1" />
-      <StatValue stattype="MedicalItemApplyingMultiplier" value="1" />
-      <StatValue stattype="RepairToolDeattachTimeMultiplier" value="1" />
-      <StatValue stattype="MedicalItemEffectivenessMultiplier" value="1" />
-      <StatValue stattype="GeneticMaterialTaintedProbabilityReductionOnCombine" value="1" />
-      <StatValue stattype="AttackMultiplier" value="2.5" />
-      <StatValue stattype="RepairSpeed" value="5" />
-      <StatValue stattype="IncreaseFabricationQuality" value="5" />
-      <StatValue stattype="skillgainspeed" value="10" />
-      <StatValue stattype="ExperienceGainMultiplier" value="10" />
-      <StatValue stattype="GeneticMaterialRefineBonus" value="10" />
     </Wearable>
     <CustomInterface canbeselected="false" drawhudwhenequipped="true" allowuioverlap="true">
       <GuiFrame relativesize="0.075,0.075" anchor="BottomLeft" relativeoffset="0.005,0.275" style="ItemUI" />
@@ -181,8 +188,7 @@
     <Wearable limbtype="Head" slots="Any,HealthInterface" msg="ItemMsgPickUpSelect">
       <sprite name="Gene Splicer Wearable" texture="%ModDir%/00000.png" limb="Head" hidelimb="false" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" hideotherwearables="false" />
       <StatusEffect type="OnWearing" target="Character" disabledeltatime="true">
-        <Affliction identifier="miracleworker" amount="1000" />
-        <Affliction identifier="pressurestabilized" amount="1000" />
+        <Affliction identifier="Vitalstabilizer" amount="500" />
       </StatusEffect>
       <StatValue stattype="ExtraMissionCount" value="5" />
     </Wearable>
@@ -215,13 +221,9 @@
     <WifiComponent range="2000000000" LinkToChat="true" allowcrossteamcommunication="true" />
     <Wearable limbtype="Head" slots="Any,Headset" msg="ItemMsgPickUpSelect">
       <sprite name="Headset Wearable" texture="%ModDir%/00000.png" limb="Head" hidelimb="false" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" hideotherwearables="false" />
-      <StatusEffect type="OnWearing" target="Character" interval="0.5" disabledeltatime="true">
-        <Affliction identifier="stabilozineeffect" amount="1000" />
-        <ReduceAffliction type="damage" amount="1" />
-        <ReduceAffliction type="burn" amount="1" />
-        <ReduceAffliction type="bleeding" amount="1" />
-        <ReduceAffliction type="bloodloss" amount="0.5" />
-        <ReduceAffliction type="infection" amount="0.25" />
+      <StatusEffect type="OnWearing" target="Character" disabledeltatime="true">
+        <Affliction identifier="stabilozineeffect" amount="500" />
+        <Affliction identifier="Regenerationenhancer" amount="500" />
       </StatusEffect>
     </Wearable>
   </Item>
@@ -282,7 +284,7 @@
     </Controller>
   </Item>
   <!--    -->
-  <Item name="" identifier="multipurposetoolknife" category="Equipment" Tags="smallitem,tool,screwdriver,screwdriveritem,wrench,wrenchitem,crowbar,crowbaritem,mountableweapon" inventoryiconcolor="250,0,0,250" spritecolor="250,0,0" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
+  <Item name="" identifier="multipurposetoolknife" category="Equipment" Tags="smallitem,tool,screwdriver,screwdriveritem,wrench,wrenchitem,crowbar,crowbaritem,mountableweapon" inventoryiconcolor="250,0,0,250" spritecolor="0,255,255" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
     <PreferredContainer primary="engcab" secondary="secarmcab" />
     <Price baseprice="12500" maxavailable="5">
       <Price storeidentifier="merchantoutpost" sold="false" />
@@ -393,7 +395,7 @@
       <ParticleEmitterHitCharacter particle="fleshsmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100" />
       <sound file="Content/Items/Tools/PlasmaCutterLoop.ogg" type="OnUse" range="500.0" loop="true" />
       <Fixable identifier="structure" />
-      <LightComponent LightColor="200,175,255,255" Flicker="0.5" vulnerabletoEMP="false" >
+      <LightComponent LightColor="200,175,255,255" Flicker="0.5" vulnerabletoEMP="false">
         <sprite texture="Content/Items/Electricity/lightsprite.png" origin="0.5,0.5" />
       </LightComponent>
     </RepairTool>
@@ -480,7 +482,7 @@
       </StatusEffect>
       <Fixable identifier="structure" />
       <NonFixable identifier="thalamus,ice" />
-      <LightComponent LightColor="255,225,175,255" Flicker="0.5" vulnerabletoEMP="false" >
+      <LightComponent LightColor="255,225,175,255" Flicker="0.5" vulnerabletoEMP="false">
         <sprite texture="Content/Items/Electricity/lightsprite.png" origin="0.5,0.5" />
       </LightComponent>
     </RepairTool>
@@ -672,7 +674,7 @@
       </StatusEffect>
       <Fixable identifier="structure" />
       <sound file="Content/Items/Alien/alienweapon.ogg" type="OnUse" range="1000.0" loop="true" />
-      <LightComponent LightColor="100,150,200,255" Flicker="0.5" range="500" vulnerabletoEMP="false" >
+      <LightComponent LightColor="100,150,200,255" Flicker="0.5" range="500" vulnerabletoEMP="false">
         <sprite texture="Content/Items/Electricity/lightsprite.png" origin="0,0.5" />
       </LightComponent>
     </RepairTool>
@@ -768,7 +770,7 @@
       </CustomInterface>
     </Wearable>
     <AiTarget soundrange="10000" sonarlabel=" " sight="500" staticsight="true" />
-    <LightComponent LightColor="0,0,0,0" range="50" castshadows="false" IsOn="false" canbeselected="false" vulnerabletoEMP="false" >
+    <LightComponent LightColor="0,0,0,0" range="50" castshadows="false" IsOn="false" canbeselected="false" vulnerabletoEMP="false">
       <StatusEffect type="OnWearing" targettype="This" SoundRange="50000" setvalue="true" />
     </LightComponent>
     <StatusHUD drawhudwhenequipped="true" />
@@ -806,7 +808,7 @@
       <sprite name="Belt" texture="%ModDir%/00000.png" sourcerect="256,102,112,54" limb="Torso" hidelimb="false" inherittexturescale="true" hideotherwearables="false" inheritorigin="true" inheritsourcerect="true" />
     </Wearable>
     <AiTarget sight="250" staticsight="true" />
-    <Sonar range="50000.0" drawhudwhenequipped="true" hasmineralscanner="true" allowuioverlap="true" vulnerabletoEMP="false" >
+    <Sonar range="50000.0" drawhudwhenequipped="true" hasmineralscanner="true" allowuioverlap="true" vulnerabletoEMP="false">
       <GuiFrame relativesize="0.275,0.5" anchor="BottomCenter" absoluteoffset="-250,100" />
       <PingCircle texture="Content/Items/Command/pingCircle.png" origin="0.5,0.5" />
       <DirectionalPingCircle texture="Content/Items/Command/directionalPingCircle.png" origin="0.0,0.5" />
@@ -826,7 +828,7 @@
       <icon identifier="mineral" texture="Content/UI/MainIconsAtlas.png" sourcerect="336,434,7,12" origin="0.5,0.5" />
       <icon identifier="" texture="Content/UI/MainIconsAtlas.png" sourcerect="346,416,4,4" origin="0.5,0.5" />
     </Sonar>
-    <MiniMap drawhudwhenequipped="true" requirewaterdetectors="false" requireoxygendetectors="false" vulnerabletoEMP="false" >
+    <MiniMap drawhudwhenequipped="true" requirewaterdetectors="false" requireoxygendetectors="false" vulnerabletoEMP="false">
       <GuiFrame relativesize="0.25,0.275" anchor="TopLeft" style="ItemUI" />
     </MiniMap>
   </Item>
