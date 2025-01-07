@@ -63,7 +63,6 @@
     </Effect>
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0" />
   </Affliction>
-
   <Affliction name="" identifier="Muscleenhancer" type="talentbuff" isbuff="true" hideiconafterdelay="true" limbspecific="false" maxstrength="100" treatmentthreshold="500" iconcolors="75,75,75;125,175,125;175,250,175">
     <Effect minstrength="0" maxstrength="100" strengthchange="-50" resistancefor="damage,burn,bleeding,bloodloss,stun,emp,pressure,gaze,hallucinating,hallucinatingshortduration,oxygenlow,alieninfection,paralysis,poison,debuff,psychosis,nausea,slow,spaceherpes,respawnpenalty,invertcontrols,infection,none" minresistance="0.75" maxresistance="0.75">
       <StatusEffect target="Character">
@@ -83,9 +82,8 @@
     </Effect>
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0" />
   </Affliction>
-
-    <Affliction name="" identifier="neuroenhancer" type="talentbuff" isbuff="true" hideiconafterdelay="true" limbspecific="false" maxstrength="100" treatmentthreshold="500" iconcolors="75,75,75;125,175,125;175,250,175">
-    <Effect minstrength="0" maxstrength="100" strengthchange="-50" >
+  <Affliction name="" identifier="neuroenhancer" type="talentbuff" isbuff="true" hideiconafterdelay="true" limbspecific="false" maxstrength="100" treatmentthreshold="500" iconcolors="75,75,75;125,175,125;175,250,175">
+    <Effect minstrength="0" maxstrength="100" strengthchange="-50">
       <StatusEffect target="Character">
         <Affliction identifier="husktransformimmunitytemporary" amount="500" />
       </StatusEffect>
@@ -107,9 +105,8 @@
     </Effect>
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0" />
   </Affliction>
-
   <Affliction name="" identifier="Regenerationenhancer" type="talentbuff" isbuff="true" hideiconafterdelay="true" limbspecific="false" maxstrength="100" treatmentthreshold="500" iconcolors="75,75,75;125,175,125;175,250,175">
-    <Effect minstrength="0" maxstrength="100" strengthchange="-50" >
+    <Effect minstrength="0" maxstrength="100" strengthchange="-50">
       <StatusEffect target="Character">
         <ReduceAffliction type="damage" amount="1" />
         <ReduceAffliction type="burn" amount="1" />
@@ -120,9 +117,8 @@
     </Effect>
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0" />
   </Affliction>
-
   <Affliction name="" identifier="Vitalstabilizer" type="talentbuff" isbuff="true" hideiconafterdelay="true" limbspecific="false" maxstrength="100" treatmentthreshold="500" iconcolors="75,75,75;125,175,125;175,250,175">
-    <Effect minstrength="0" maxstrength="100" strengthchange="-50" >
+    <Effect minstrength="0" maxstrength="100" strengthchange="-50">
       <StatusEffect target="Character">
         <Affliction identifier="durationincrease" amount="500" />
       </StatusEffect>
@@ -130,7 +126,6 @@
     </Effect>
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0" />
   </Affliction>
-
   <Affliction name="" identifier="nano.nightvision" type="none" isbuff="true" limbspecific="false" indicatorlimb="Head" maxstrength="100" showiconthreshold="infinity">
     <Effect minstrength="0" maxstrength="100" multiplybymaxvitality="true" graincolor="0,0,0,255" mingrainstrength="0.75" maxgrainstrength="1" minscreenblur="0.75" maxscreenblur="1" strengthchange="-500" />
   </Affliction>

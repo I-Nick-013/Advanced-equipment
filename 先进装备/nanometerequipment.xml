@@ -144,7 +144,7 @@
       </sprite>
       <StatusEffect type="OnWearing" target="Character" OxygenAvailable="10000" UseHullOxygen="true">
         <Affliction identifier="neuroenhancer" amount="500" />
-        <Affliction identifier="adrenalinerush" amount="500" />        
+        <Affliction identifier="adrenalinerush" amount="500" />
       </StatusEffect>
     </Wearable>
     <CustomInterface canbeselected="false" drawhudwhenequipped="true" allowuioverlap="true">
@@ -284,7 +284,7 @@
     </Controller>
   </Item>
   <!--    -->
-  <Item name="" identifier="multipurposetoolknife" category="Equipment" Tags="smallitem,tool,screwdriver,screwdriveritem,wrench,wrenchitem,crowbar,crowbaritem,mountableweapon" inventoryiconcolor="250,0,0,250" spritecolor="0,255,255" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
+  <Item name="" identifier="multipurposetoolknife" category="Equipment" Tags="smallitem,tool,screwdriver,screwdriveritem,wrench,wrenchitem,crowbar,crowbaritem,mountableweapon" inventoryiconcolor="255,125,0,125" spritecolor="255,125,0,125" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
     <PreferredContainer primary="engcab" secondary="secarmcab" />
     <Price baseprice="12500" maxavailable="5">
       <Price storeidentifier="merchantoutpost" sold="false" />
