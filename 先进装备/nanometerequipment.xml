@@ -155,7 +155,7 @@
       </TickBox>
     </CustomInterface>
     <StatusHUD drawhudwhenequipped="true" />
-    <StatusHUD drawhudwhenequipped="true" overlaycolor="125,175,255,125" range="10000" thermalgoggles="true" showdeadcharacters="false" showtexts="false" />
+    <StatusHUD drawhudwhenequipped="true" overlaycolor="250,150,50,50" range="10000" thermalgoggles="true" showdeadcharacters="false" showtexts="false" />
     <StatusHUD drawhudwhenequipped="true" overlaycolor="50,50,50,50" debugwiring="true" showtexts="false" />
   </Item>
   <!--    -->
@@ -749,7 +749,7 @@
     <Wearable limbtype="Head" slots="Any,HealthInterface" msg="ItemMsgPickUpSelect">
       <WifiComponent range="2000000000" LinkToChat="true" allowcrossteamcommunication="true" />
       <sprite name="Gene Splicer Wearable" texture="%ModDir%/00000.png" limb="Head" hidelimb="false" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" hideotherwearables="false">
-        <LightComponent LightColor="125,175,255,125" range="2500" castshadows="false" powerconsumption="1000000000" IsOn="true" vulnerabletoEMP="false" />
+        <LightComponent LightColor="100,175,255,255" range="2500" castshadows="false" powerconsumption="1000000000" IsOn="true" vulnerabletoEMP="false" />
       </sprite>
       <StatusEffect type="OnWearing" target="Character" disabledeltatime="true">
         <Affliction identifier="nano.nightvision" amount="50" />
@@ -774,7 +774,7 @@
       <StatusEffect type="OnWearing" targettype="This" SoundRange="50000" setvalue="true" />
     </LightComponent>
     <StatusHUD drawhudwhenequipped="true" />
-    <StatusHUD drawhudwhenequipped="true" overlaycolor="125,175,255,125" range="10000" thermalgoggles="true" showdeadcharacters="false" showtexts="false" />
+    <StatusHUD drawhudwhenequipped="true" overlaycolor="250,150,50,50" range="10000" thermalgoggles="true" showdeadcharacters="false" showtexts="false" />
     <StatusHUD drawhudwhenequipped="true" overlaycolor="50,50,50,50" debugwiring="true" showtexts="false" />
   </Item>
   <!--    -->
